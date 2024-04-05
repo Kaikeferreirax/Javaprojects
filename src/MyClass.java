@@ -6,11 +6,30 @@ public class MyClass {
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
 
+        SmartTv smartTv = new SmartTv();
 
-        System.out.println("Enter your name:");
-        String name = sc.nextLine();
+        System.out.println("Tv ligada? " + smartTv.ligada);
+        System.out.println("Canal atual : " + smartTv.canal);
+        System.out.println(" volume :" +smartTv.volume);
 
-        System.out.println(name);
+        smartTv.ligar();
+        System.out.println("Tv ligada? " + smartTv.ligada);
+
+        smartTv.desligar();
+        System.out.println("Tv ligada? " + smartTv.ligada);
+
+        smartTv.aumentarVolume();
+        System.out.println(" volume :" +smartTv.volume);
+
+        smartTv.diminuirVolume();
+        System.out.println(" volume :" +smartTv.volume);
+
+        System.out.println("Para qual canal você deseja mudar? ");
+        int Canal = smartTv.mudarCanal(sc.nextInt());
+
+        System.out.println("Canal atual: " + smartTv.canal);
+
+
 
         sc.close();
     }
