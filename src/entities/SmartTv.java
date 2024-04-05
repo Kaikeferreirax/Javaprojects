@@ -2,9 +2,9 @@ package entities;
 
 public class SmartTv {
 
-    boolean ligada = false;
-    int canal = 1;
-    int volume = 25;
+    public boolean ligada = false;
+     public int canal = 1;
+     public int volume = 25;
 
 
     public int mudarCanal(int Canal){
